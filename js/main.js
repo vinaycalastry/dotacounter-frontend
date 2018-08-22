@@ -28,7 +28,7 @@ new Vue({
                         this.nodata = false;
                         
                     }
-                    this.success = false;                    
+                    //this.success = false;                    
                 }
             );
         }
