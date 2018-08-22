@@ -11,12 +11,14 @@ new Vue({
         searchhero: function(){
             axios.get('https://dotacounter-backend.herokuapp.com/dotacounter/'+this.$refs.heroname.value).then(
                 (response) => {
-                    this.success = true;
-                    this.nodata = false;
+                    
                     var heroes = response.data;    
                     this.badAgainstHeroes = heroes["Bad Against"];
                     this.goodAgainstHeroes = heroes["Good Against"];
                     this.worksWellWithHeroes = heroes["Works Well With"];
+
+                    this.success = true;
+                    this.nodata = false;
                 }
             ).catch(
                 (error)=>{
