@@ -4,7 +4,7 @@ new Vue({
         badAgainstHeroes: [],
         goodAgainstHeroes: [],
         worksWellWithHeroes:[],
-        success:false,
+        success:true,
         nodata: false
     },
     methods:{
