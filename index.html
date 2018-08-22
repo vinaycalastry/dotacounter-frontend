@@ -49,7 +49,7 @@
                                       </div>
                                       <!--end of col-->
                                       <div class="col">
-                                          <input class="form-control form-control-lg form-control-borderless" type="search" v-on:keyup.enter="searchhero" placeholder="Search for hero counter" ref="heroname">
+                                          <input class="form-control form-control-lg form-control-borderless" type="search" v-on:keyup.enter="searchhero" @keydown.enter.prevent.self placeholder="Search for hero counter" ref="heroname">
                                       </div>
                                       <!--end of col-->
                                       <div class="col-auto">
