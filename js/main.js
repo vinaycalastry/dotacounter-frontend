@@ -4,7 +4,7 @@ new Vue({
         badAgainstHeroes: [],
         goodAgainstHeroes: [],
         worksWellWithHeroes:[],
-        success:true,
+        success:false,
         nodata: false
     },
     methods:{
@@ -28,7 +28,7 @@ new Vue({
                         this.nodata = false;
                         
                     }
-                    //this.success = false;                    
+                    this.success = false;                    
                 }
             );
         }
