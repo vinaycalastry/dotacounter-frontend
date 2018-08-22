@@ -33,7 +33,6 @@ new Vue({
                     this.success = false;                    
                 }
             );
-            return false;
         }
     }
 });
