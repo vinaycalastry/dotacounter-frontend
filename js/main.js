@@ -9,7 +9,7 @@ new Vue({
     },
     methods:{
         searchhero: function(){
-            axios.get('http://localhost:3000/dotacounter/'+this.$refs.heroname.value).then(
+            axios.get('https://dotacounter-backend.herokuapp.com/dotacounter/'+this.$refs.heroname.value).then(
                 (response) => {
                     this.success = true;
                     this.nodata = false;
