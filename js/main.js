@@ -10,24 +10,27 @@ new Vue({
     methods:{
         searchhero: function(){
             axios.get('https://dotacounter-backend.herokuapp.com/dotacounter/'+this.$refs.heroname.value).then(
-                (response) => {              
+                (response) => {
+                    this.success = true;
+                    this.nodata = false;
                     var heroes = response.data;    
                     this.badAgainstHeroes = heroes["Bad Against"];
                     this.goodAgainstHeroes = heroes["Good Against"];
                     this.worksWellWithHeroes = heroes["Works Well With"];
                     this.success = true;
-                    this.nodata = false;                         
+                    this.nodata = false;                       
                 }
             ).catch(
                 (error)=>{
+                    
                     if(error.response.status === 422){
                         this.nodata = true;
-                        this.success = false;
                     }
                     else{
                         this.nodata = false;
-                        this.success = false;
-                    }                    
+                        
+                    }
+                    this.success = false;                    
                 }
             );
         }
